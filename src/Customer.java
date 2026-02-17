@@ -1,13 +1,16 @@
 public class Customer extends User {
 
     // TODO: constructor
+    Customer(String name, int id) {
+        super(name, id);
+    }
 
 
     @Override
     public void manageService(Service s) {
 
         // TODO:
-        // print that customer cannot manage services
+        System.out.println("You do not have access to service management due to restricted rights");
 
     }
 
@@ -15,8 +18,7 @@ public class Customer extends User {
     public void useService(Service s) {
 
         // TODO:
-        // print customer using message
-        // call performService()
-
+        System.out.println("You're a customer. You can use available services");
+        s.performService();
     }
 }
